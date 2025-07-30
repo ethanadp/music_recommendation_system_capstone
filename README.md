@@ -1,12 +1,21 @@
 # Music Recommendation System: Model Comparison and Insights
 
-This project explores how music recommendation systems can be optimized for user engagement using collaborative filtering, matrix factorization, and clustering-based approaches. We evaluate multiple models using real-world user-song interaction data and compare their performance through key metrics.
-
 This project was developed as the final capstone for the [Berkeley ExecEd Professional Certificate in Machine Learning and Artificial Intelligence](https://em-executive.berkeley.edu/professional-certificate-machine-learning-artificial-intelligence).
 
-## Project Objective
+## Project Overview and Goals
+This project explores how music recommendation systems can be optimized for user engagement through collaborative filtering, matrix factorization, and clustering-based models. We implemented and evaluated multiple models to identify which approaches best predict user listening behavior and balance key performance metrics such as precision, recall, and F1 score.
 
-To investigate the effectiveness of various recommendation strategies in predicting user preferences, and determine which models best balance precision, recall, and overall F1 score.
+## Findings
+Even with a significantly filtered and reduced dataset, our tuned recommendation models significantly improved performance compared to their untuned counterparts. The top-performing models were:
+- **SVD Tuned** and **User-User Tuned** models consistently balanced high recall with respectable precision, **leading to the best F1 scores**.
+- Co-Clustering offered decent recall but lagged slightly in precision.
+
+Performance was evaluated through Precision, Recall, and F1 Score, shown in the figures below:
+![Precision Plot](precision_plot.png)
+
+![Recall Plot](recall_plot.png)
+
+![F1 Score Plot](f1_score_plot.png)
 
 ## Data Sources
 
@@ -45,22 +54,14 @@ Note: Due to the size of the dataset, it is not included in this repository. You
 At a threshold of 1.15, tuned models demonstrated the following performance:
 
 ### Precision Comparison
-
 ![Precision Plot](precision_plot.png)
 
 ### Recall Comparison
-
 ![Recall Plot](recall_plot.png)
 
 ### F1 Score Comparison
-
 ![F1 Score Plot](f1_score_plot.png)
 
-Observations:
-
-- SVD Tuned and User-User Tuned models consistently balanced high recall with respectable precision, leading to the best F1 scores.
-- Co-Clustering offered decent recall but lagged slightly in precision.
-- Hyperparameter tuning generally improved model performance across all metrics.
 
 ## Conclusion
 
