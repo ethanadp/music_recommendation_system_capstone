@@ -14,11 +14,11 @@ To investigate the effectiveness of various recommendation strategies in predict
   - `song_data.csv`: Contains metadata about tracks, such as their IDs, titles, artist_names, releases (album name), and years the songs were published.
   - `count_data.csv`: Contains user interaction data such as user IDs, song IDs, and the count of times the song was played by those users.
 - Records:
-  - song_data.csv: ~1,000,000 songs
-  - count_data.csv: ~2,000,000 listening events
+  - `song_data.csv`: ~1,000,000 songs
+  - `count_data.csv`: ~2,000,000 listening events
 - Key Features:
-  - From song_data.csv: `song_id`, `title`, `artist_name`, `release`, `year`
-  - From count_data.csv: `user_id`, `song_id`, `play_count`
+  - `song_data.csv`: `song_id`, `title`, `artist_name`, `release`, `year`
+  - `count_data.csv`: `user_id`, `song_id`, `play_count`
 
 Note: Due to the size of the dataset, it is not included in this repository. You can download the required data from the official Million Song Dataset: [http://millionsongdataset.com/](http://millionsongdataset.com/).
 
