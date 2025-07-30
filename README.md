@@ -22,26 +22,24 @@ To investigate the effectiveness of various recommendation strategies in predict
 
 Note: Due to the size of the dataset, it is not included in this repository. You can download the required data from the official Million Song Dataset: [http://millionsongdataset.com/](http://millionsongdataset.com/).
 
-## Models Evaluated
-
-The project includes both untuned and optimized versions of the following models:
-
-- User-User Collaborative Filtering
-- Item-Item Collaborative Filtering
-- Singular Value Decomposition (SVD)
-- Co-Clustering
-
-The Surprise library was used for model implementation and tuning.
-
-## Evaluation Metrics
-
-Models were assessed at multiple rating thresholds using the following metrics:
-
-- Root Mean Square Error (RMSE)
-- Precision@K
-- Recall@K
-- F1 Score
-
+## Methodology
+- **Preprocessing**:
+  - Encoded user and song IDs
+  - Filtered long-tail user and item distributions
+  - Normalized play count values
+- **Models Trained**:
+  - **User-User Collaborative Filtering**: Recommends songs to a user based on the preferences of other users with similar behavior. It relies on finding "neighbors" with shared listening patterns.
+  - **Item-Item Collaborative Filtering**: Suggests songs similar to those a user has already enjoyed. This method focuses on the similarity between items based on user interactions.
+  - **SVD (Singular Value Decomposition)**: A matrix factorization technique that captures latent features of users and items, allowing more nuanced recommendations even with sparse data.
+  - **Co-Clustering**: Groups both users and items simultaneously into clusters, and makes predictions based on interactions between these groups. It can uncover hidden structure in the data not captured by other methods.
+- **Evaluation Techniques**:
+  - **Root Mean Square Error (RMSE)**: Measures the average magnitude of prediction errors. Lower RMSE indicates better accuracy in estimating user preferences.
+  - **Precision@K**: Indicates the proportion of recommended songs in the top-K list that are relevant. Higher precision means fewer irrelevant recommendations.
+  - **Recall@K**: Reflects the proportion of relevant songs successfully recommended within the top-K list. Higher recall implies better coverage of user interests.
+  - **F1 Score**: The harmonic mean of precision and recall. A higher F1 Score signals a strong balance between relevance and coverage.
+- **Tuning**:
+  - **GridSearchCV** and custom thresholds to optimize top-K performance
+    
 ## Findings
 
 At a threshold of 1.15, tuned models demonstrated the following performance:
