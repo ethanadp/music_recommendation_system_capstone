@@ -8,7 +8,7 @@ This project explores how music recommendation systems can be optimized for user
 ## Findings
 Even with a significantly filtered and reduced dataset, our tuned recommendation models significantly improved performance compared to their untuned counterparts. The top-performing models were:
 - **SVD Tuned** and **User-User Tuned** models consistently balanced high recall with respectable precision, **leading to the best F1 scores**.
-- Co-Clustering offered decent recall but lagged slightly in precision.
+- Co-Clustering offered decent precision but lagged slightly in recall.
 
 Performance was evaluated through Precision, Recall, and F1 Score, shown in the figures below:
 ![Precision Plot](precision_plot.png)
@@ -48,21 +48,7 @@ Note: Due to the size of the dataset, it is not included in this repository. You
   - **F1 Score**: The harmonic mean of precision and recall. A higher F1 Score signals a strong balance between relevance and coverage.
 - **Tuning**:
   - **GridSearchCV** and custom thresholds to optimize top-K performance
-    
-## Findings
-
-At a threshold of 1.15, tuned models demonstrated the following performance:
-
-### Precision Comparison
-![Precision Plot](precision_plot.png)
-
-### Recall Comparison
-![Recall Plot](recall_plot.png)
-
-### F1 Score Comparison
-![F1 Score Plot](f1_score_plot.png)
-
-
+   
 ## Conclusion
 
 This project demonstrates the strengths and trade-offs of different recommendation techniques. It shows that tuning hyperparameters significantly boosts performance, especially when optimizing for F1 Score.
@@ -76,6 +62,7 @@ The work serves as a foundation for building more nuanced, scalable, and persona
 - Matplotlib and Seaborn for Visualization
 - NLTK for basic text processing
 
-## Author
-
-This project was developed as part of a professional development journey in data science, with the goal of understanding recommendation systems from both a technical and strategic perspective.
+## Contact and Further Information
+- Ethan de Para
+- Email: ethan.adepara@gmail.com
+- [LinkedIn](https://www.linkedin.com/in/ethan-adp6816/)
